@@ -39,48 +39,23 @@ class SearchBooks extends React.Component {
 
     return (
       <div id="search">
-        <div className="close-search">
+      <div className="search-books-bar">
+      <div className="close-search">
           <Link
             to='/'
             className="close-search"
           />
         </div>
-        <div className="search-wrap">
-          <input
+        <div className="search-books-input-wrapper">
+        <input
             className="search-bar"
             value={this.state.query}
             onChange={this.onSearchBooks}
             placeholder="Search by title or author"
           />
         </div>
-        {/* <div className="search-books-results">
-        {list.length > 0 && (
-          <div>
-            <ol className="books-grid">
-              {
-                list.map((book, index) => (
-                  <li key={index}>
-                    <ShelfItem
-                    totalBooks={props.totalBooks}
-                    {...book}
-                    updateShelf={props.initBookShelves}
-                  />
-                  </li>
+      </div>
 
-                ))
-              }
-            </ol>
-          </div>
-
-        ) }
-
-        {this.state.searchErr && (
-          <div>
-          <h3>Search returned 0 books.  Please try again!</h3>
-          </div>
-
-        )}
-        </div> */}
         <div className="search-books-results">
           <ol className="books-grid">
 

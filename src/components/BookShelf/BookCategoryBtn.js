@@ -11,7 +11,19 @@ class BookCategoryBtn extends React.Component {
   }
 
   componentDidMount = () => {
-    this.setState({value: this.props.book.shelf})
+    console.log("$$$$",this)
+    if(this.props.shelf){
+      console.log("####", this.props)
+      this.setState({value: this.props.shelf})
+    }
+    else {
+      this.setState({value: 'none'})
+    }
+  }
+  componentDidUpdate(prevProps) {
+    if(this.props.shelf !== prevProps.shelf){
+      this.setState({value: this.props.shelf})
+    }
   }
 
   handleChange = (event) => {
